@@ -1,0 +1,51 @@
+image
+*****
+to solve proplem of Fake Path...
+
+Solve of proplem by upload img to server and get it from server
+but we can solve it temporary.
+
+We will determine a specific path..and add to it name of img
+there is a special property for file input
+input.files -->it returns array
+------------------------------------------------------------------
+if i have property it propaply through an error
+u should put (?) after it
+------------------------------------------------------------------
+validation
+***********
+regular expression (regex)
+
+var regex= /   regex   /
+
+********************************
+We Can Test At Website regex101*
+********************************
+
+to make regex
+
+ /abc/ -->should include abc NOT a OR b OR c  
+
+/ [abc] / --> include a OR b OR c
+
+/ [a-z] / --> include from a to z (but small only)
+
+/ [a-zA-Z] / --> include from a to z (Capital OR Small)
+
+/ [A-Z][a-z]{5} / -->First Character Capital and ba2e small  
+
+{}-->number of repeate [a-z] only (last regex)
+
+[^0-9]-->any thing not 0-9
+^ -->start with
+$ -->end with
+? -->{0,1}
++ -->{1,infinity}
+* -->{0,infinity}
+\d-->[0-9]
+\w-->[a-zA-Z0-9_]
+\s-->space
+. -->Any Thing
+
+
+

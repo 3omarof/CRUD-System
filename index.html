@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD S System</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+
+    <div class="container py-4">
+      
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            placeholder="product Name"
+            oninput="validation('productName')"
+          />
+          <p id="parInvalidproductName"  class="alert my-2 d-none alert-danger ">The Name Should has from 4 to 20 character Only.</p>
+          <p id="parValidproductName"    class="alert my-2 d-none alert-success">The Name Is Valid</p>
+          <label for="productName">product Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            class="form-control"
+            id="productPrice"
+            placeholder="product Price"
+            oninput="validation('productPrice')"
+          />
+          <p id="parInvalidproductPrice"  class="alert my-2 d-none alert-danger ">The Price Should Be From 6 Digits Only And Start With Any Number Not 0.</p>
+          <p id="parValidproductPrice"    class="alert my-2 d-none alert-success">The Price Is Valid</p>
+          <label for="productPrice">product Price</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            list="category"
+            type="text"
+            class="form-control"
+            id="productCategory"
+            placeholder="product Category"
+            oninput="validation('productCategory')"
+
+          />
+          <label for="productCategory">product Category</label>
+          <p id="parInvalidproductCategory"  class="alert my-2 d-none alert-danger ">You Should Choose From List</p>
+          <p id="parValidproductCategory"    class="alert my-2 d-none alert-success">The Category Is Valid</p>
+          <datalist id="category">
+            <option value="TV"></option>
+            <option value="Mobile"></option>
+            <option value="Screens"></option>
+            <option value="Electronics"></option>
+          </datalist>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="file"
+            class="form-control"
+            id="productImage"
+            placeholder="product Image"
+            oninput="validation('productImage')"
+          />
+          <p id="parInvalidproductImage" class="alert my-3 d-none alert-danger ">Image Is Not Valid</p>
+          <p id="parValidproductImage"   class="alert my-3 d-none alert-success">Image Is Valid</p>
+          
+          <label for="productImage">product Image</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea
+            type="text"
+            style="height: 100px"
+            class="form-control"
+            id="productDescription"
+            placeholder="product Description"
+            oninput="validation('productDescription')"
+          >
+          </textarea>
+          <p id="parInvalidproductDescription" class="alert my-3 d-none alert-danger ">Description Is Not Valid</p>
+          <p id="parValidproductDescription"   class="alert my-3 d-none alert-success">Description Is Valid</p>
+          <label for="productDescription">product Description</label>
+        </div>
+
+        <button class="btn btn-outline-success" onclick="addProduct()" id="addBtn">Add Product</button>
+        <button class="btn btn-outline-warning d-none" onclick="updateProducts()" id="updateBtn" >Update Product</button>
+
+
+        <div class="form-floating mt-4 mb-4 w-75 m-auto" oninput="search()">
+          <input
+            type="search"
+            class="form-control"
+            id="productSearch"
+            placeholder="Search..."
+          />
+          <label for="productSearch">Search</label>
+        </div>
+
+        <div class="row mt-5 g-4 " id="colsOfRow">
+
+        
+        </div>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="./js/index.js"></script>
+  </body>
+</html>

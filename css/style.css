@@ -1,0 +1,18 @@
+.form-control:focus{
+    border: 2px solid gray;
+    box-shadow: none;
+}
+ 
+.alert {
+  --bs-alert-padding-x: 0.5rem;
+  --bs-alert-padding-y: 0.5rem;
+  --bs-alert-margin-bottom: 1rem;
+  --bs-alert-border: var(--bs-border-width) solid var(--bs-alert-border-color);
+  --bs-alert-border-radius: var(--bs-border-radius);
+  position: relative;
+  padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
+  color: var(--bs-alert-color);
+  background-color: var(--bs-alert-bg);
+  border: var(--bs-alert-border);
+  border-radius: var(--bs-alert-border-radius);
+} 
